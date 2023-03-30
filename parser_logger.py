@@ -7,7 +7,7 @@ class Logger:
     log_path = base_dir + '/parser.log'
     logging.basicConfig(filename=log_path,
                         encoding='utf-8',
-                        level=logging.WARN,
+                        level=logging.INFO,
                         filemode='a',
                         format='%(asctime)s - %(levelname)s - %(message)s')
 
