@@ -76,7 +76,7 @@ class GetNews:
         logger.info('Parser all article to db')
         first_page = self.get_page(url)
         max_paginator_page = paginator_page if paginator_page is not None else self._get_paginator(first_page)
-        for page in range(5, 0, -1):
+        for page in range(max_paginator_page, 0, -1):
             logger.info(f'Get page: {page}')
             self._get_page_and_parse(url + paginator + str(page), domain)
         return self.news_array
